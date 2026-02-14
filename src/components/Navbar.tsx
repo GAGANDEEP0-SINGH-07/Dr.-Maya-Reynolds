@@ -1,42 +1,61 @@
+﻿"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { drMayaProfile, navItems } from "@/content/drMayaProfile";
 import Container from "./Container";
 
 export default function Navbar() {
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
+
+  useEffect(() => {
+    const THRESHOLD = 8; // px of scroll needed to trigger
+    const handleScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY.current + THRESHOLD) {
+        setHidden(true); // scrolling DOWN → hide
+      } else if (y < lastY.current - THRESHOLD) {
+        setHidden(false); // scrolling UP → show
+      }
+      lastY.current = y;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <Container className="py-5 md:py-3">
-        <div className="flex items-center justify-between md:hidden">
-          <button
-            type="button"
-            aria-label="Open menu"
-            className="flex h-9 w-9 items-center justify-center"
-          >
-            <span className="relative block h-4 w-5">
-              <span className="absolute left-0 top-[3px] h-px w-full bg-[hsl(var(--black-hsl))]" />
-              <span className="absolute left-0 top-[10px] h-px w-full bg-[hsl(var(--black-hsl))]" />
-            </span>
-          </button>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 pt-4 transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${hidden ? "-translate-y-full" : "translate-y-0"
+        }`}
+    >
+      <Container>
+        <div className="glass-bar px-5 py-3 md:px-8 md:py-4">
+          <div className="flex items-center justify-between gap-4">
+            <Link
+              href="/"
+              className="font-[var(--font-family-heading)] text-[1.3rem] font-semibold tracking-tight text-[hsl(var(--dark-accent-hsl))] md:text-[1.5rem]"
+            >
+              {drMayaProfile.name}
+            </Link>
 
-          <Link href="/" className="text-[1rem] font-medium leading-none">
-            Lilac Template
-          </Link>
-        </div>
+            <nav aria-label="Main" className="hidden md:block">
+              <ul className="flex items-center gap-7 text-[0.95rem] font-medium text-[hsl(var(--black-hsl))]">
+                {navItems.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href} className="transition-colors hover:text-[hsl(var(--accent-hsl))]">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-        <div className="hidden items-center justify-between md:flex">
-          <Link href="/" className="text-[2rem] font-medium leading-none">
-            Lilac Template
-          </Link>
-
-          <nav aria-label="Main">
-            <ul className="flex items-center gap-9 text-[1rem]">
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
+            <a href="#contact" className="btn btn-medium btn-dark min-h-0 px-4 py-3 md:px-5">
+              Book a Session
+            </a>
+          </div>
         </div>
       </Container>
     </header>

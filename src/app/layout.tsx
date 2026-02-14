@@ -1,14 +1,28 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+﻿import type { Metadata } from "next";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Lilac Template",
-  description: "Homepage clone project",
-};
+const bodyFont = DM_Sans({
+  variable: "--font-family-main",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
-const typekitUrl =
-  "https://use.typekit.net/ik/MKo0s4tW_aprvHMbtJgoMo7uLcSPlojcLhb_AUHVjk9fen3gfFHN4UJLFRbh52jhWDjuZ2I3jDZyZeFcjA48wQ6U5AmqFe93FUGMJygcScmTZhyXOWs8pYblSY4zJ6Z1dagGZWJ7fbKj-sMMeMb6MKG4f4TTIMMjgkMfH6qJcAqbMg65JMJ7fbKd-sMMegI6MKGHfO1mMyMgeMb6MKGHfOzmMyMgeM96MKGHfOamMyMgeMS6MKGHfOnmMyMgeMt6MKGHfODmMyMgeMv6MKGHfO_mMyMgegI6MTMgN5Q5n6j.js";
+const headingFont = Playfair_Display({
+  variable: "--font-family-heading",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title:
+    "Dr. Maya Reynolds, PsyD | Anxiety & Trauma Therapist in Santa Monica, CA",
+  description:
+    "Licensed clinical psychologist offering evidence-based therapy for anxiety, trauma, PTSD, and burnout. In-person sessions in Santa Monica and secure telehealth across California. CBT, EMDR & mindfulness-based care.",
+};
 
 export default function RootLayout({
   children,
@@ -17,31 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://images.squarespace-cdn.com" />
-        <link rel="preconnect" href="https://use.typekit.net" crossOrigin="" />
-        <link rel="preconnect" href="https://p.typekit.net" crossOrigin="" />
-      </head>
-      <body>
-        <Script id="font-loading-class" strategy="beforeInteractive">
-          {`document.documentElement.classList.add('wf-loading');`}
-        </Script>
-        <Script id="typekit-loader" strategy="afterInteractive">
-          {`(function () {
-            var root = document.documentElement;
-            var script = document.createElement('script');
-            script.src = '${typekitUrl}';
-            script.async = true;
-            script.onload = function () {
-              try { Typekit.load(); } catch (e) {}
-              root.classList.remove('wf-loading');
-            };
-            script.onerror = function () {
-              root.classList.remove('wf-loading');
-            };
-            document.head.appendChild(script);
-          }());`}
-        </Script>
+      <body className={`${bodyFont.variable} ${headingFont.variable}`}>
         {children}
       </body>
     </html>
