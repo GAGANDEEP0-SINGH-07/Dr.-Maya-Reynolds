@@ -1,15 +1,16 @@
-import About from "@/components/About";
-import Challenges from "@/components/Challenges";
-import Contact from "@/components/Contact";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Office from "@/components/Office";
-import ProfessionalBackground from "@/components/ProfessionalBackground";
-import Profile from "@/components/Profile";
-import RevealSection from "@/components/RevealSection";
-import Services from "@/components/Services";
+import { Navbar, Footer } from "@/components/layout";
+import { Container, RevealSection } from "@/components/ui";
+import {
+  Hero,
+  About,
+  Challenges,
+  Services,
+  Office,
+  Profile,
+  ProfessionalBackground,
+  FAQ,
+  Contact,
+} from "@/components/sections";
 
 export default function HomePage() {
   return (

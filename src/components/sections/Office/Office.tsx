@@ -1,8 +1,6 @@
-import Container from "./Container";
-import Link from "next/link";
+import { Container } from "@/components/ui";
 
 export default function Office() {
-    // extracted IDs from the provided drive links
     const images = {
         left: "/images/office1.jpeg",
         right: "/images/office2.jpeg",
@@ -25,9 +23,7 @@ export default function Office() {
                     </p>
                 </div>
 
-                {/* 2-Column Grid for 2 Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
-                    {/* Left Column Image */}
                     <div className="office-image-container relative h-[500px] md:h-[600px] transition-transform duration-700 hover:scale-[1.03] cursor-pointer">
                         <img
                             src={images.left}
@@ -36,7 +32,6 @@ export default function Office() {
                         />
                     </div>
 
-                    {/* Right Column Image */}
                     <div className="office-image-container relative h-[500px] md:h-[600px] transition-transform duration-700 hover:scale-[1.03] cursor-pointer">
                         <img
                             src={images.right}

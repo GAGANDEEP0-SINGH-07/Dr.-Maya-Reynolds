@@ -1,0 +1,38 @@
+:root {
+    /* Palette: Dusk Rose & Midnight */
+    --white-hsl: 40 33% 96%;
+    /* ivory background */
+    --black-hsl: 220 12% 22%;
+    /* charcoal text */
+    --light-accent-hsl: 350 30% 92%;
+    /* blush pink tint */
+    --dark-accent-hsl: 230 28% 18%;
+    /* deep midnight */
+    --bright-hsl: 10 48% 93%;
+    /* blush highlight */
+    --accent-hsl: 36 68% 55%;
+    /* warm gold CTA */
+    --secondary-hsl: 350 45% 65%;
+    /* soft rose */
+    --line-hsl: 30 14% 82%;
+    /* warm neutral lines */
+
+    --site-max-width: 1500px;
+    --site-gutter-mobile: 6vw;
+    --site-gutter-desktop: 3.75vw;
+
+    --font-family-main: "DM Sans", "Segoe UI", sans-serif;
+    --font-family-heading: "Playfair Display", "Georgia", serif;
+
+    --font-weight-heading: 500;
+    --font-weight-body: 400;
+
+    --h1-size: clamp(2.5rem, 5.9vw, 4.9rem);
+    --h2-size: clamp(1.95rem, 4.1vw, 3.1rem);
+    --h3-size: clamp(1.6rem, 3vw, 2.35rem);
+    --h4-size: clamp(1.2rem, 2.1vw, 1.72rem);
+    --text-size: 1.04rem;
+    --small-text-size: 0.9rem;
+    --shadow-soft: 0 16px 44px hsl(var(--dark-accent-hsl) / 0.10);
+    --shadow-strong: 0 22px 52px hsl(var(--dark-accent-hsl) / 0.15);
+}

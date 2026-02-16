@@ -1,0 +1,26 @@
+.glass-bar {
+    border: 1px solid hsl(var(--line-hsl) / 0.45);
+    border-radius: 999px;
+    background: hsl(var(--white-hsl) / 0.84);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 12px 30px hsl(var(--dark-accent-hsl) / 0.12);
+}
+
+.mobile-menu-panel {
+    background:
+        linear-gradient(180deg,
+            hsl(var(--white-hsl)) 0%,
+            hsl(var(--bright-hsl)) 100%);
+    box-shadow: -8px 0 40px hsl(var(--dark-accent-hsl) / 0.12);
+    border-left: 1px solid hsl(var(--line-hsl) / 0.3);
+}
+
+.sqs-gutter-x {
+    padding-inline: var(--site-gutter-mobile);
+}
+
+@media (min-width: 768px) {
+    .sqs-gutter-x {
+        padding-inline: var(--site-gutter-desktop);
+    }
+}

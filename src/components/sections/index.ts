@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as About } from "./About";
+export { default as Challenges } from "./Challenges";
+export { default as Services } from "./Services";
+export { default as Office } from "./Office";
+export { default as Profile } from "./Profile";
+export { default as ProfessionalBackground } from "./ProfessionalBackground";
+export { default as FAQ } from "./FAQ";
+export { default as Contact } from "./Contact";
