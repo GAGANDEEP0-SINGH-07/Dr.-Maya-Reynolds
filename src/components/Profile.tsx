@@ -44,7 +44,7 @@ export default function Profile() {
 
           <div className="order-1 md:order-2">
             <div className="relative mx-auto w-full max-w-[34rem] pb-16 md:pb-20">
-              <div className="ml-auto w-[76%] drop-shadow-2xl">
+              <div className="ml-auto w-[76%]">
                 <div className="arch-mask">
                   <img
                     src={profileImage}
@@ -54,7 +54,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 left-0 w-[36%] md:left-[6%] md:w-[30%] drop-shadow-xl">
+              <div className="absolute -bottom-4 left-0 w-[36%] md:left-[6%] md:w-[30%]">
                 <div className="circle-mask border-4 border-[hsl(var(--white-hsl))]">
                   <img
                     src={detailImage}

@@ -24,7 +24,7 @@ export default function Services() {
             {drMayaProfile.specialtyCards.map((specialty) => (
               <li
                 key={specialty.title}
-                className="group card-surface flex flex-col rounded-[1.8rem] p-6 transition-all hover:-translate-y-1.5 hover:shadow-2xl md:p-8"
+                className="group card-surface flex flex-col rounded-[1.8rem] p-6 transition-[transform,box-shadow] hover:-translate-y-1.5 hover:shadow-2xl md:p-8"
               >
                 <div className="mb-6 overflow-hidden rounded-2xl">
                   <img

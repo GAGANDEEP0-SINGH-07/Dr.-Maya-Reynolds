@@ -55,7 +55,7 @@ export default function Contact() {
             {benefits.map((b) => (
               <div
                 key={b.label}
-                className="flex max-w-[280px] flex-col items-center gap-3 place-self-center rounded-[24px] border border-white/[0.08] bg-white/[0.05] px-5 py-6 backdrop-blur-md transition-all duration-300 hover:border-[hsl(var(--accent-hsl)/0.35)] hover:bg-white/[0.08]"
+                className="flex max-w-[280px] flex-col items-center gap-3 place-self-center rounded-[24px] border border-white/[0.08] bg-white/[0.07] px-5 py-6 transition-[border-color,background-color] duration-300 hover:border-[hsl(var(--accent-hsl)/0.35)] hover:bg-white/[0.1]"
               >
                 {/* Icon with circular background */}
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(var(--accent-hsl)/0.12)] text-[hsl(var(--accent-hsl))]">

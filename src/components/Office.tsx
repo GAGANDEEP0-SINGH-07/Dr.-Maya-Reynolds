@@ -28,20 +28,20 @@ export default function Office() {
                 {/* 2-Column Grid for 2 Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
                     {/* Left Column Image */}
-                    <div className="relative overflow-hidden h-[500px] md:h-[600px] rounded-[40px]">
+                    <div className="office-image-container relative h-[500px] md:h-[600px] transition-transform duration-700 hover:scale-[1.03] cursor-pointer">
                         <img
                             src={images.left}
                             alt="Therapy office interior"
-                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                            className="absolute inset-0 w-full h-full object-cover"
                         />
                     </div>
 
                     {/* Right Column Image */}
-                    <div className="relative overflow-hidden h-[500px] md:h-[600px] rounded-[40px]">
+                    <div className="office-image-container relative h-[500px] md:h-[600px] transition-transform duration-700 hover:scale-[1.03] cursor-pointer">
                         <img
                             src={images.right}
                             alt="Detailed view of the office"
-                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                            className="absolute inset-0 w-full h-full object-cover"
                         />
                     </div>
                 </div>

@@ -10,15 +10,25 @@ export default function Navbar() {
   const lastY = useRef(0);
 
   useEffect(() => {
-    const THRESHOLD = 8; // px of scroll needed to trigger
-    const handleScroll = () => {
+    const THRESHOLD = 8;
+    let ticking = false;
+
+    const update = () => {
       const y = window.scrollY;
       if (y > lastY.current + THRESHOLD) {
-        setHidden(true); // scrolling DOWN → hide
+        setHidden(true);
       } else if (y < lastY.current - THRESHOLD) {
-        setHidden(false); // scrolling UP → show
+        setHidden(false);
       }
       lastY.current = y;
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

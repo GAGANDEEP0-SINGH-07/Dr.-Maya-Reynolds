@@ -1,7 +1,7 @@
 ﻿import { drMayaProfile } from "@/content/drMayaProfile";
 import Container from "./Container";
 
-const imageUrl = "/images/Gemini_Generated_Image_bk6jlkbk6jlkbk6j.png";
+const imageUrl = "/images/challenges.webp";
 
 export default function Challenges() {
   return (

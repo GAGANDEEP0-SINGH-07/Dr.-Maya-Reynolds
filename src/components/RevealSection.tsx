@@ -26,7 +26,21 @@ export default function RevealSection({
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    // Add will-change just before animation
+                    el.style.willChange = 'transform, opacity';
+
+                    // Trigger animation
                     el.classList.add("in-view");
+
+                    // Remove will-change and transitions after animation completes
+                    const cleanup = () => {
+                        el.style.willChange = 'auto';
+                        el.classList.add('revealed');
+                        el.removeEventListener('transitionend', cleanup);
+                    };
+
+                    el.addEventListener('transitionend', cleanup);
+
                     observer.unobserve(el);
                 }
             },

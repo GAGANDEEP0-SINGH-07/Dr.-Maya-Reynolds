@@ -49,10 +49,6 @@ body {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-body);
@@ -63,9 +59,6 @@ body {
     radial-gradient(circle at 8% 10%,
       hsl(var(--light-accent-hsl) / 0.6),
       transparent 30%),
-    radial-gradient(circle at 90% 12%,
-      hsl(var(--accent-hsl) / 0.14),
-      transparent 34%),
     linear-gradient(180deg,
       hsl(var(--white-hsl)) 0%,
       hsl(var(--bright-hsl)) 100%);
@@ -276,11 +269,20 @@ summary::-webkit-details-marker {
   border-radius: 9999px;
 }
 
+.office-image-container {
+  border-radius: 2.8rem !important;
+  overflow: hidden !important;
+}
+
+.office-image-container img {
+  border-radius: 2.8rem !important;
+}
+
 .glass-bar {
   border: 1px solid hsl(var(--line-hsl) / 0.45);
   border-radius: 999px;
   background: hsl(var(--white-hsl) / 0.84);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   box-shadow: 0 12px 30px hsl(var(--dark-accent-hsl) / 0.12);
 }
 
@@ -352,6 +354,13 @@ summary::-webkit-details-marker {
 .reveal-right.in-view {
   opacity: 1;
   transform: translate(0);
+}
+
+.revealed {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+  transition: none !important;
+  will-change: auto !important;
 }
 
 .reveal-delay-1 {
