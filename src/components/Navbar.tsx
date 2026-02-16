@@ -101,8 +101,8 @@ export default function Navbar() {
                 >
                   <span
                     className={`block h-[2px] w-5 rounded-full bg-[hsl(var(--dark-accent-hsl))] transition-transform duration-300 ${menuOpen
-                        ? "translate-y-[7px] rotate-45"
-                        : ""
+                      ? "translate-y-[7px] rotate-45"
+                      : ""
                       }`}
                   />
                   <span
@@ -111,8 +111,8 @@ export default function Navbar() {
                   />
                   <span
                     className={`block h-[2px] w-5 rounded-full bg-[hsl(var(--dark-accent-hsl))] transition-transform duration-300 ${menuOpen
-                        ? "-translate-y-[7px] -rotate-45"
-                        : ""
+                      ? "-translate-y-[7px] -rotate-45"
+                      : ""
                       }`}
                   />
                 </button>
@@ -124,9 +124,9 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/30 transition-opacity duration-300 md:hidden ${menuOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+        className={`fixed inset-0 z-[55] bg-black/30 transition-opacity duration-300 md:hidden ${menuOpen
+          ? "pointer-events-auto opacity-100"
+          : "pointer-events-none opacity-0"
           }`}
         onClick={() => setMenuOpen(false)}
       />
@@ -134,7 +134,7 @@ export default function Navbar() {
       {/* Mobile Menu Panel */}
       <nav
         aria-label="Mobile navigation"
-        className={`fixed right-0 top-0 z-45 h-full w-[280px] bg-[hsl(var(--white-hsl))] px-8 pt-28 shadow-2xl transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed right-0 top-0 z-[60] h-full w-[280px] bg-[hsl(var(--white-hsl))] px-8 pt-28 shadow-2xl transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <ul className="flex flex-col gap-6 text-[1.1rem] font-medium text-[hsl(var(--dark-accent-hsl))]">
