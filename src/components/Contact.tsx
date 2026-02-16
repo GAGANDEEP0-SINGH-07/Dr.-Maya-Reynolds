@@ -76,12 +76,12 @@ export default function Contact() {
           </div>
 
           {/* CTA Button — primary focal point */}
-          <button
-            type="button"
+          <a
+            href="#contact"
             className="mt-6 inline-block rounded-full border-none bg-[hsl(var(--accent-hsl))] px-10 py-3.5 text-[0.95rem] font-semibold text-[hsl(var(--dark-accent-hsl))] shadow-[0_6px_24px_hsl(var(--accent-hsl)/0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_hsl(var(--accent-hsl)/0.55)] hover:brightness-110 active:translate-y-0"
           >
             Schedule Your First Session
-          </button>
+          </a>
 
           {/* Address — de-emphasised, below button */}
           <p className="mt-4 text-[0.7rem] tracking-[0.06em] text-[hsl(var(--white-hsl)/0.35)]">

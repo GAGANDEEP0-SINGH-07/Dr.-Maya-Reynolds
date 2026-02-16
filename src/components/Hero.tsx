@@ -67,7 +67,7 @@ export default function Hero() {
                 <img
                   src={heroImage}
                   alt="Warm therapy office interior in Santa Monica"
-                  className="h-[28rem] w-full object-cover md:h-[42rem]"
+                  className="h-[20rem] w-full object-cover sm:h-[28rem] md:h-[42rem]"
                 />
                 <div className="absolute bottom-5 left-5 rounded-2xl bg-[hsl(var(--white-hsl)/0.95)] px-4 py-3 text-sm font-semibold text-[hsl(var(--dark-accent-hsl))] shadow-md">
                   Calm, private office — natural light & quiet setting.
