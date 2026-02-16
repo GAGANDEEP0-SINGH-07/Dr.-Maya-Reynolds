@@ -286,6 +286,15 @@ summary::-webkit-details-marker {
   box-shadow: 0 12px 30px hsl(var(--dark-accent-hsl) / 0.12);
 }
 
+.mobile-menu-panel {
+  background:
+    linear-gradient(180deg,
+      hsl(var(--white-hsl)) 0%,
+      hsl(var(--bright-hsl)) 100%);
+  box-shadow: -8px 0 40px hsl(var(--dark-accent-hsl) / 0.12);
+  border-left: 1px solid hsl(var(--line-hsl) / 0.3);
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
